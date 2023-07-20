@@ -4,6 +4,8 @@
   <img src="https://raw.githubusercontent.com/erkindil/GithubRepositoryEdit/main/cfm.png">
 </p>
 
+<img src="https://raw.githubusercontent.com/erkindil/GithubRepositoryEdit/main/cbt.gif" align="right" width="210">
+
 ## Technologies
 - Jetpack Compose
 - Firebase
