@@ -17,7 +17,7 @@
 - MVVM
 - Navigation
 - Room
-- Datastore
+- DataStore
 - WorkManager
 
 ## License
