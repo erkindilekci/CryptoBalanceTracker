@@ -13,7 +13,6 @@
 - Coroutines
 - Flows
 - Gson
-- Coil
 - Clean Architecture
 - MVVM
 - Navigation
