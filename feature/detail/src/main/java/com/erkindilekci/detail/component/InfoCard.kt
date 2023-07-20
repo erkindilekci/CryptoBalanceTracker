@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.erkindilekci.ui.theme.Orange
@@ -27,13 +28,18 @@ fun InfoCard(lastChange: Double, text: String) {
     Card(shape = RoundedCornerShape(16.dp)) {
         Column(
             modifier = Modifier
-                .size(120.dp, 80.dp)
+                .size(140.dp, 80.dp)
                 .background(Orange)
                 .padding(5.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Text(text = text, fontSize = 16.sp, color = Color(0xFFEBE7E7))
+            Text(
+                text = text,
+                fontSize = 16.sp,
+                color = Color(0xFFEBE7E7),
+                textAlign = TextAlign.Center
+            )
             Spacer(modifier = Modifier.height(3.dp))
             Text(
                 text = "%${String.format("%.2f", lastChange)}",

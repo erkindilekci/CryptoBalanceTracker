@@ -39,9 +39,8 @@ fun DetailScreen(
     val formattedPrice = formatPrice(price.toDouble())
     val coroutineScope = rememberCoroutineScope()
 
-    val sheetState = rememberModalBottomSheetState(
-        initialValue = ModalBottomSheetValue.Hidden,
-        confirmStateChange = { it != ModalBottomSheetValue.HalfExpanded }
+    val sheetState = rememberModalBottomSheetState(initialValue = ModalBottomSheetValue.Hidden,
+        confirmValueChange = { it != ModalBottomSheetValue.HalfExpanded }
     )
 
     ModalBottomSheetLayout(
@@ -91,11 +90,20 @@ fun DetailScreen(
             }
 
             Spacer(modifier = Modifier.height(20.dp))
-            Text(text = "$$formattedPrice", fontSize = 36.sp, color = Color.White, fontWeight = FontWeight.Medium)
+            Text(
+                text = "$$formattedPrice",
+                fontSize = 36.sp,
+                color = Color.White,
+                fontWeight = FontWeight.Medium
+            )
 
             Spacer(modifier = Modifier.height(30.dp))
-            DetailInfoSection(lastDayChange.toDouble(), lastOneHourChange.toDouble())
-            Spacer(modifier = Modifier.height(60.dp))
+            DetailInfoSection(
+                lastDayChange.toDouble(),
+                lastOneHourChange.toDouble()
+            )
+
+            Spacer(modifier = Modifier.height(40.dp))
 
             CustomButton(
                 text = "Add To Portfolio",
@@ -122,7 +130,10 @@ fun DetailScreen(
 }
 
 @Composable
-fun DetailInfoSection(lastDayChange: Double, lastOneHourChange: Double) {
+fun DetailInfoSection(
+    lastDayChange: Double,
+    lastOneHourChange: Double
+) {
     Row(
         modifier = Modifier
             .fillMaxWidth(),
